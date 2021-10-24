@@ -7,25 +7,36 @@ public class Bingo {
     public static void main(String[] args) {
         int x;
         int i;
+        int counter = 0;
+        String s;
         System.out.println("Игра  Bingo - угадай число");
-        i = Random.nextInt(101);
+        Random randnew = new Random();
+        i = randnew.nextInt(101);
         Scanner in = new Scanner(System.in);
-            while () {
-                System.out.println("Введите число от 0 до 100");
-                x = in.nextInt();
-                if (i = x){
+            while (true) {
+                counter++;
+                System.out.println("Введите число от 0 до 100. Для прекращения игры введите stop. Попытка " + counter);
+                s = in.next();
+                if (s.equals("stop"))
+                    break;
+
+                x = Integer.parseInt(s);
+
+                if (i == x) {
                    System.out.println("Вы угадали число, поздравляю!");
+                   break;
                 }
-                else {
-                    if (x < i) {
+                if (x < i) {
                         System.out.println("Загаданное число быльше введенного, повторите попытку");
-                    }
-                    else{
+                        }
+                if (x > i) {
                         System.out.println("Загаданное число меньше введенного, повторите попыткку");
+
                     }
                 }
+            System.out.println("Количество попыток " + counter);
+            System.out.println("Игра завершена");
             }
 
-
     }
-}
+
