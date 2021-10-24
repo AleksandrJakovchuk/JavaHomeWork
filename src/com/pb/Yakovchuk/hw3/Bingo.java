@@ -15,7 +15,7 @@ public class Bingo {
         Scanner in = new Scanner(System.in);
             while (true) {
                 counter++;
-                System.out.println("Введите число от 0 до 100. Для прекращения игры введите stop. Попытка " + counter);
+                System.out.println("Введите число от 1 до 100. Для прекращения игры введите stop. Попытка " + counter);
                 s = in.next();
                 if (s.equals("stop"))
                     break;
