@@ -29,11 +29,19 @@ public class Array {
                      mas[j] = mas[j+1];
                      mas[j+1] = temp;
                  }
+    int s_min = 0;
+    int s_plus = 0;
+    for (int i=0; i< mas.length; i++) {
+        if (mas[i] < 0) s_min = s_min + 1;
+        if (mas[i] > 0) s_plus = s_plus + 1;
+    }
     System.out.println(" ");
     System.out.println("Отсортированный массив");
     for (int i=0; i< mas.length; i++)
          System.out.print(mas[i]+" ");
     System.out.println(" ");
+    System.out.println("Количество элементов массива меньше 0  " + s_min);
+    System.out.println("Количество элементов массива больше 0  " + s_plus);
     System.out.println("Максимальное число массива  " + max);
     System.out.println("Сумма элементов массива " + sum);
     }
