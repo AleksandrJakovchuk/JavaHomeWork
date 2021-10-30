@@ -23,14 +23,19 @@ public class Anagram {
         char[] char2 = secondline.replaceAll("[\\s]", "").toCharArray();
         for (int i = 0; i < firstline.length()-1; i++){
             char1[i] = Character.toUpperCase(char1[i]);
-
             }
         for (int i = 0; i < secondline.length()-1; i++){
             char2[i] = Character.toUpperCase(char2[i]);
-
         }
         Arrays.sort(char1);
         Arrays.sort(char2);
+        //if (firstline.length()!=secondline.length()) {return false;}
+        //else {
+        //    for (int i = 0; i < firstline.length(); i++) {
+        //        if (char1[i] == char2[i]) continue;
+        //        else {return false;}
+        //        }
+        //    }
         return Arrays.equals(char1, char2);
     }
 
