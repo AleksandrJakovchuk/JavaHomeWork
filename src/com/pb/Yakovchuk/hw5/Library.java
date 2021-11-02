@@ -22,6 +22,22 @@ public class Library {
         book1.year = "2010";
         book2.year = "2020";
         book3.year = "2015";
+        book1.takeBook(3);
+        book1.takeBook(book1.name_book);
+        book2.takeBook(book2.name_book);
+        book3.takeBook(book3.name_book);
+        System.out.println(reader1.fio);
+        book1.takeBook(book1.name_book);
+        book2.takeBook(book2.name_book);
+        book3.takeBook(book3.name_book);
+        System.out.println(reader2.fio);
+        book1.takeBook(book1.name_book);
+        book2.takeBook(book2.name_book);
+        book3.takeBook(book3.name_book);
+        System.out.println(reader3.fio);
+        book1.takeBook(book1.name_book);
+        book2.takeBook(book2.name_book);
+        book3.takeBook(book3.name_book);
 
     }
 }
